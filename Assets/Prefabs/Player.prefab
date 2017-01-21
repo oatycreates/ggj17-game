@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 114250653100856506}
   - component: {fileID: 54421556871735242}
   - component: {fileID: 65456957995654300}
+  - component: {fileID: 114245196899558512}
   m_Layer: 0
   m_Name: MarlinFlip
   m_TagString: Untagged
@@ -247,8 +248,23 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.75, y: 0.75, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.75, y: 0.75, z: 1}
+  m_Center: {x: -0.9, y: 0, z: 0}
+--- !u!114 &114245196899558512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984157792994370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e50a8c422a3f4cd3b77739454f57185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numGridPoints: 15
+  waterLevelY: -5
+  objectDensity: 10
+  volumeGridScaleMult: 2.2
 --- !u!114 &114250653100856506
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -21,9 +21,8 @@ GameObject:
   - component: {fileID: 4026454345819440}
   - component: {fileID: 114897013544259138}
   - component: {fileID: 54976959745984772}
-  - component: {fileID: 135629930983746520}
-  - component: {fileID: 145545697715857616}
-  - component: {fileID: 114222811038258580}
+  - component: {fileID: 65761062968728146}
+  - component: {fileID: 114922970168527956}
   m_Layer: 0
   m_Name: SwipeObject
   m_TagString: Untagged
@@ -54,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074754221904032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.04, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4056347587673288}
@@ -69,7 +68,7 @@ Transform:
   m_GameObject: {fileID: 1924173139267774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 20, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 4026454345819440}
   m_RootOrder: 0
@@ -87,20 +86,20 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 0
---- !u!114 &114222811038258580
-MonoBehaviour:
+  m_Constraints: 56
+  m_CollisionDetection: 2
+--- !u!65 &65761062968728146
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074754221904032}
+  m_Material: {fileID: 13400000, guid: 442dce45012ae5a43a9b375acd471488, type: 2}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d2596069c2b2840b364d222ea06a43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weightMod: 1
+  serializedVersion: 2
+  m_Size: {x: 4.5, y: 0.75, z: 1}
+  m_Center: {x: -1, y: 0, z: 0}
 --- !u!114 &114897013544259138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,38 +111,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefee3d8335bb49c7a2ad15c76998c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135629930983746520
-SphereCollider:
+--- !u!114 &114922970168527956
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074754221904032}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!145 &145545697715857616
-SpringJoint:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1074754221904032}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -5.04, y: -3, z: 0}
-  serializedVersion: 2
-  m_Spring: 10
-  m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 2
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e50a8c422a3f4cd3b77739454f57185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iNumPoints: 10
+  fWaterLevel: 0
+  fDensityObject: 25
+  fScaleScanModifier: 2.2
 --- !u!212 &212435004603036970
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -175,7 +157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

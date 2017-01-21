@@ -43,7 +43,10 @@ public class SwipeObject : MonoBehaviour {
     /// <param name="a_swipeDuration">How long the swipe took to complete.</param>
 	public void OnSwipe(Vector3 a_swipeStartPos, Vector3 a_swipeEndPos, float a_swipeDist, float a_swipeDuration)
 	{
+		// Add swipe force to RigidBody
 		float swipeSpeed = a_swipeDist / a_swipeDuration;
-		m_rigidbody.AddForceAtPosition((a_swipeEndPos - a_swipeStartPos).normalized * swipeSpeed, a_swipeStartPos, ForceMode.Force);
+		Vector3 swipeDirection = (a_swipeEndPos - a_swipeStartPos).normalized;
+		m_rigidbody.AddForceAtPosition(swipeDirection * swipeSpeed, a_swipeStartPos, ForceMode.Force);
+
 	}
 }
