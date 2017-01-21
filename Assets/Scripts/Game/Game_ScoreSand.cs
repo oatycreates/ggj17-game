@@ -8,28 +8,25 @@ using UnityEngine;
 
 public class Game_ScoreSand : MonoBehaviour 
 {
-	public int activeSand;
-	public int startingSand;
-
 	private string percentage;
+
+	private Game_FindRestingSand activeSandCountScript = null;
 
 	void Start()
 	{
-		activeSand = Game_FindActiveSand.totalSandBlocks;
-
-		startingSand = activeSand;
+		activeSandCountScript = FindObjectOfType<Game_FindRestingSand>();
 	}
 
 	void Update()
 	{
-		percentage = (ToPercent( activeSand, startingSand).ToString() + "%");
+		percentage = (ToPercent( activeSandCountScript.GetCastleDestroyPercent() ).ToString() + "%");
 	}
 
-	float ToPercent(float current, float total)
+	float ToPercent(float a_rawRatio)
 	{
 		float percent = 0;
 
-		percent = ( current / total ) * 100;
+		percent = ( a_rawRatio ) * 100;
 
 		percent = Mathf.RoundToInt(percent);
 

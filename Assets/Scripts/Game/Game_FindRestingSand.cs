@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Find all the active sand blocks in the scene.
+/// Find all the disturbed and resting sand blocks in the scene.
 /// </summary>
-public class Game_FindrestingSand : MonoBehaviour 
+public class Game_FindRestingSand : MonoBehaviour 
 {
 	private SandPhysicsResting[] sand;
 	public List<SandPhysicsResting> restingSand = new List<SandPhysicsResting>();

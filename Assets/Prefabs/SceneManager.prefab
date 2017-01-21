@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4773497562553226}
   - component: {fileID: 114956694753280428}
+  - component: {fileID: 114711360239441230}
+  - component: {fileID: 114722658387100442}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -40,6 +42,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114711360239441230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542512598563370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a73356cd95fdf4fb679f9fd07ed04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restingSand: []
+--- !u!114 &114722658387100442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1542512598563370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd2f5f3b97da1548b38536440313fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSand: 0
+  startingSand: 0
 --- !u!114 &114956694753280428
 MonoBehaviour:
   m_ObjectHideFlags: 1
