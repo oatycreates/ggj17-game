@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 114897013544259138}
   - component: {fileID: 54976959745984772}
   - component: {fileID: 135629930983746520}
+  - component: {fileID: 145545697715857616}
+  - component: {fileID: 114222811038258580}
   m_Layer: 0
   m_Name: SwipeObject
   m_TagString: Untagged
@@ -52,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074754221904032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.04, y: -2, z: 0}
+  m_LocalPosition: {x: -5.04, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4056347587673288}
@@ -87,6 +89,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &114222811038258580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074754221904032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d2596069c2b2840b364d222ea06a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weightMod: 1
 --- !u!114 &114897013544259138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,6 +124,26 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!145 &145545697715857616
+SpringJoint:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074754221904032}
+  m_ConnectedBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: -5.04, y: -3, z: 0}
+  serializedVersion: 2
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 2
+  m_Tolerance: 0.025
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
 --- !u!212 &212435004603036970
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// The connected Rigidbody's Mass increases as it's distance from the Spring's Anchor Increases
+/// CHANGE: The connected Rigidbody's Mass Increases as it's distance from the Spring's Anchor Increases (not Height per se');
 /// </summary>
 
 public class Experiment_WeightWithHeight : MonoBehaviour 
@@ -31,7 +31,7 @@ public class Experiment_WeightWithHeight : MonoBehaviour
 		myMass = distanceFromAnchor;
 		myMass = Mathf.Clamp(myMass, 1, myMass);
 
-		//Set the GameObject's Mass
+		//Set the Rigidbody's custom Mass
 		myRigid.mass = myMass * weightMod;
 
 	}

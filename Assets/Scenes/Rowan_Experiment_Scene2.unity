@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &70084880 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1411506120825026, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -123,6 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1001 &114527656
 Prefab:
   m_ObjectHideFlags: 0
@@ -223,6 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &219413672 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1948169773523968, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -239,6 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1001 &350832414
 Prefab:
   m_ObjectHideFlags: 0
@@ -297,6 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1001 &385477980
 Prefab:
   m_ObjectHideFlags: 0
@@ -359,6 +369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &499858825 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1548029309616292, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -375,48 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &504664740 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1074754221904032, guid: 6f61e44e5e6e9408f83f569b4693f5b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 350832414}
---- !u!145 &504664741
-SpringJoint:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 504664740}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -5.04, y: -3, z: 0}
-  serializedVersion: 2
-  m_Spring: 10
-  m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 2
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
---- !u!4 &504664744 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4026454345819440, guid: 6f61e44e5e6e9408f83f569b4693f5b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 350832414}
---- !u!114 &504664746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 504664740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56d2596069c2b2840b364d222ea06a43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weightMod: 1
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &592100141 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1451466544024858, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -433,6 +405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1001 &605612385
 Prefab:
   m_ObjectHideFlags: 0
@@ -491,6 +465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &646057242 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1313448683825476, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -507,6 +483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &724474384 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1171533498719486, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -523,6 +501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &729191738 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1743712864187808, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -539,6 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &731445117 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1014163365227828, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -555,6 +537,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &797395860 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1738827589327742, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -571,6 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &845655030 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1381927867466608, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -587,6 +573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1001 &890598224
 Prefab:
   m_ObjectHideFlags: 0
@@ -653,6 +641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &965680446 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1944104559731918, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -669,6 +659,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &971095278
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1067130334 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1815203333425826, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -788,6 +782,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1070186083 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1824150814080640, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -804,6 +800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1089701722 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1494830597124574, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -820,6 +818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1131000383
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,12 +842,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1131000383}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.04, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 504664744}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &1131000385
 TrailRenderer:
@@ -969,6 +969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1154225309 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1568145254932244, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -985,6 +987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1158684437 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1575435644886052, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1001,6 +1005,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1207138736 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1959500727369330, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1017,6 +1023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1471489079 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1169865650989274, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1033,6 +1041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1483218620 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1746466477331336, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1049,6 +1059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1527547515 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1232802305160876, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1065,6 +1077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1605989144 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1586142156589304, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1081,6 +1095,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1659712663 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1570020620018700, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1097,6 +1113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1673519526 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1403134457190044, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1113,6 +1131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1822103161 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1265323960287364, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1129,6 +1149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1870904508 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1713466215490148, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1145,6 +1167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1888051934 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1138796126513034, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1161,6 +1185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &1970442839 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1275608432365096, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1177,6 +1203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1001 &1973546903
 Prefab:
   m_ObjectHideFlags: 0
@@ -1243,6 +1271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &2009787053 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1741540809118218, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1259,6 +1289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &2029195371 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1381253997727862, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1275,6 +1307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!1 &2073182002 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1008974886961246, guid: 1054768202a72eb4bbc732cb68c13b12,
@@ -1291,3 +1325,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
