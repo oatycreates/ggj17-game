@@ -58,7 +58,6 @@ public class TouchDrag : MonoBehaviour {
 			// Determine if the user has swiped far enough
 			float swipeDist = Vector3.Distance(m_swipeStartPos, inputPos);
 			float swipeDuration = Time.time - m_swipeStartTime;
-			Debug.Log("Start: " + m_swipeStartPos + ", end: " + inputPos  + ", distance: " + swipeDist + ", duration: " + swipeDuration);
 			if (swipeDist > minSwipeDist) {
 				TriggerSwipe(m_swipeStartPos, inputPos, swipeDist, swipeDuration);
 			}
@@ -74,7 +73,6 @@ public class TouchDrag : MonoBehaviour {
     /// <param name="a_swipeDuration">How long the swipe took to complete.</param>
     private void TriggerSwipe(Vector3 a_swipeStartPos, Vector3 a_swipeEndPos, float a_swipeDist, float a_swipeDuration)
     {
-		Debug.Log("Detected swipe!");
 		if (OnSwipe != null)
 		{
 			OnSwipe(a_swipeStartPos, a_swipeEndPos, a_swipeDist, a_swipeDuration);
