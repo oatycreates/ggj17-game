@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody))]
 public class SwipeObject : MonoBehaviour {
 #region Variables
 	private TouchDrag m_touchDrag = null;
-	private Rigidbody2D m_rigidbody2D = null;
+	private Rigidbody m_rigidbody = null;
 #endregion
 
 	/// <summary>
@@ -20,7 +20,7 @@ public class SwipeObject : MonoBehaviour {
 		}
 		m_touchDrag.OnSwipe += OnSwipe;
 
-		m_rigidbody2D = GetComponent<Rigidbody2D>();
+		m_rigidbody = GetComponent<Rigidbody>();
 	}
 	
 	/// <summary>
@@ -41,6 +41,6 @@ public class SwipeObject : MonoBehaviour {
 	public void OnSwipe(Vector3 a_swipeStartPos, Vector3 a_swipeEndPos, float a_swipeDist, float a_swipeDuration)
 	{
 		float swipeSpeed = a_swipeDist / a_swipeDuration;
-		m_rigidbody2D.AddForceAtPosition((a_swipeEndPos - a_swipeStartPos).normalized * swipeSpeed, a_swipeStartPos, ForceMode2D.Force);
+		m_rigidbody.AddForceAtPosition((a_swipeEndPos - a_swipeStartPos).normalized * swipeSpeed, a_swipeStartPos, ForceMode.Force);
 	}
 }
