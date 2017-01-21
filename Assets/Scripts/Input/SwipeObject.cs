@@ -21,6 +21,9 @@ public class SwipeObject : MonoBehaviour {
 		m_touchDrag.OnSwipe += OnSwipe;
 
 		m_rigidbody = GetComponent<Rigidbody>();
+		if (m_rigidbody == null) {
+			Debug.LogError("Couldn't find RigidBody component!");
+		}
 	}
 	
 	/// <summary>

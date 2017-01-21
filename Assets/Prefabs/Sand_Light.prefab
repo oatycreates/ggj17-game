@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restVelocityThreshold: 0.1
+  minTriggerMoveDist: 0.1
 --- !u!138 &138665590891005340
 FixedJoint:
   m_ObjectHideFlags: 1

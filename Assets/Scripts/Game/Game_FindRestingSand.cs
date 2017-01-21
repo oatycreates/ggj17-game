@@ -10,15 +10,15 @@ public class Game_FindRestingSand : MonoBehaviour
 	private SandPhysicsResting[] sand;
 	public List<SandPhysicsResting> restingSand = new List<SandPhysicsResting>();
 
-	void Awake()
-	{
-		sand = GameObject.FindObjectsOfType<SandPhysicsResting>();
-
-		print ("There are " + sand.Length + " block of sand in the scene.");
-	}
-
 	void Start()
 	{
+		sand = GameObject.FindObjectsOfType<SandPhysicsResting>();
+		Debug.Log("There are " + sand.Length + " block of sand in the scene.");
+
+		if (sand.Length == 0) {
+			Debug.LogError("Couldn't find any Sand objects in the scene!");
+		}
+
 		StartCoroutine(CheckSandStatus());
 	}
 
@@ -46,12 +46,12 @@ public class Game_FindRestingSand : MonoBehaviour
 			}
 		}
 
-		print ("There are now " + restingSand.Count + " resting disturbed sand pieces. The castle destroy percent is: " + GetCastleDestroyPercent());
+		print ("There are now " + restingSand.Count + " resting disturbed sand pieces. The castle destroy percent is: " + (GetCastleDestroyPercent() * 100.0f));
 		return restingSand.Count;
 	}
 
 	public float GetCastleDestroyPercent()
 	{
-		return restingSand.Count / sand.Length;
+		return (float)restingSand.Count / sand.Length;
 	}
 }
