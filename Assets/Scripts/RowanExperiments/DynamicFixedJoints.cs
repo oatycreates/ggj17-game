@@ -7,12 +7,12 @@ using UnityEngine;
 /// </summary>
 public class DynamicFixedJoints : MonoBehaviour 
 {
-	private Rigidbody myRigid;
 	public float breakForce = 1000.0f;
+	private Rigidbody m_rigidbody = null;
 
 	void Awake()
 	{
-		myRigid = gameObject.GetComponent<Rigidbody>() as Rigidbody;
+		m_rigidbody = gameObject.GetComponent<Rigidbody>() as Rigidbody;
 	}
 
 	void OnCollisionEnter(Collision a_other)
@@ -22,7 +22,7 @@ public class DynamicFixedJoints : MonoBehaviour
 			//Has a rigidbody but no fixed joint...
 			FixedJoint joint = a_other.gameObject.AddComponent<FixedJoint>() as FixedJoint;
 
-			joint.connectedBody = myRigid;
+			joint.connectedBody = m_rigidbody;
 			joint.breakForce = breakForce;
 
 		}

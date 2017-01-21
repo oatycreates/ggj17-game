@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23199353522961960}
   - component: {fileID: 54773706559734778}
   - component: {fileID: 138016975132312886}
+  - component: {fileID: 114579875510821274}
   m_Layer: 0
   m_Name: Sand_Heavy
   m_TagString: Sand
@@ -109,6 +110,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114579875510821274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208902112973880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!138 &138016975132312886
 FixedJoint:
   m_ObjectHideFlags: 1

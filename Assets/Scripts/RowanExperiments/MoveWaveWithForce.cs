@@ -7,24 +7,27 @@ using UnityEngine;
 /// </summary>
 public class MoveWaveWithForce : MonoBehaviour 
 {
-	private Rigidbody myRigid;
+	private Rigidbody m_rigidbody;
 
 	public float moveForce = 1000.0f;
 
 	void Awake()
 	{
-		myRigid = gameObject.GetComponent<Rigidbody>() as Rigidbody;
+		m_rigidbody = gameObject.GetComponent<Rigidbody>() as Rigidbody;
+		if (m_rigidbody == null) {
+			Debug.LogError("Couldn't find RigidBody component!");
+		}
 	}
 
 	void FixedUpdate()
 	{
 		if (Input.GetKey(KeyCode.Space))
 		{
-			myRigid.AddForce( Vector3.right * moveForce, ForceMode.Acceleration );
+			m_rigidbody.AddForce( Vector3.right * moveForce, ForceMode.Acceleration );
 		}
 		else
 		{
-			myRigid.AddForce( Vector3.right * -(moveForce/10), ForceMode.Acceleration);
+			m_rigidbody.AddForce( Vector3.right * -(moveForce/10), ForceMode.Acceleration);
 		}
 	}
 }

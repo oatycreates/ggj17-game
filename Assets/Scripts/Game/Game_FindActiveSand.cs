@@ -5,34 +5,53 @@ using UnityEngine;
 /// <summary>
 /// Find all the active sand blocks in the scene.
 /// </summary>
-public class Game_FindActiveSand : MonoBehaviour 
+public class Game_FindrestingSand : MonoBehaviour 
 {
-	private GameObject[] sand;
-	public List<GameObject> activeSand = new List<GameObject>();
+	private SandPhysicsResting[] sand;
+	public List<SandPhysicsResting> restingSand = new List<SandPhysicsResting>();
 
 	void Awake()
 	{
-		sand = GameObject.FindGameObjectsWithTag("Sand");
+		sand = GameObject.FindObjectsOfType<SandPhysicsResting>();
 
 		print ("There are " + sand.Length + " block of sand in the scene.");
 	}
 
 	void Start()
 	{
-		//Add sand to the list ONLY if it's active in heirarchy.
+		StartCoroutine(CheckSandStatus());
+	}
+
+	IEnumerator CheckSandStatus()
+	{
+		// Check with an interval to reduce the impact of lag.
+		yield return new WaitForSeconds(1.5f);
+
+		GetrestingSandCount();
+	
+		// Schedule the next sand check
+		StartCoroutine(CheckSandStatus());
+	}
+
+	private int GetrestingSandCount()
+	{
+		restingSand.Clear();
+
+		//Add sand to the list ONLY if it's active in hierarchy.
 		for (int i = 0; i < sand.Length; i++)
 		{
-			if (!sand[i].activeInHierarchy)
+			if (sand[i].HasSandBeenTriggered() && sand[i].IsSandResting())
 			{
-				return;	
-			}
-			else
-			{
-				activeSand.Add( sand[i] );
+				restingSand.Add( sand[i] );
 			}
 		}
 
-		print ("However, only " + activeSand.Count + " are Active In Heirarchy.");
+		print ("There are now " + restingSand.Count + " resting disturbed sand pieces. The castle destroy percent is: " + GetCastleDestroyPercent());
+		return restingSand.Count;
 	}
 
+	public float GetCastleDestroyPercent()
+	{
+		return restingSand.Count / sand.Length;
+	}
 }

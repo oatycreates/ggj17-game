@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23310663459192486}
   - component: {fileID: 54144994081176840}
   - component: {fileID: 138665590891005340}
+  - component: {fileID: 114832849814225674}
   m_Layer: 0
   m_Name: Sand_Light
   m_TagString: Sand
@@ -109,6 +110,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114832849814225674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119609025159128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!138 &138665590891005340
 FixedJoint:
   m_ObjectHideFlags: 1

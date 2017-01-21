@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23578325675691428}
   - component: {fileID: 54213161185014170}
   - component: {fileID: 138553497374552578}
+  - component: {fileID: 114217048358447366}
   m_Layer: 0
   m_Name: Sand_Normal
   m_TagString: Sand
@@ -109,6 +110,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114217048358447366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1627090042254816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4e5ebcfdc9348b897d1c5014e579dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!138 &138553497374552578
 FixedJoint:
   m_ObjectHideFlags: 1
