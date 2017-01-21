@@ -1,6 +1,6 @@
 # Mar-leen Flip
 
-Fish-tacular game project created during the 2017 Global Game Jam at the Melbourne, Australia site for the 'Waves' theme. 🐬
+Fish-tacular Unity game project created during the 2017 Global Game Jam at the Melbourne, Australia site for the 'Waves' theme. 🐬
 
 # Credits
 Design: Rowan Donaldson - [@DevRowan](https://twitter.com/DevRowan)
