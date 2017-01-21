@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Shakes the UI element in local space when activated
+/// Moves an UI Image when Triggered
 /// </summary>
-public class UI_Shake : MonoBehaviour 
+
+public class UI_Translate : MonoBehaviour 
 {
 	private Image myImage;
 	private Text myText;
-
 	public bool activate = false;
-	public float shakeSpeed = 5;
-	public float shakeStrength = 5;
+	public float moveSpeed = 5;
 
+	public Vector3 hiddenPosition;
+	public Vector3 shownPosition;
 	private RectTransform myRect;
-	private Vector3 rememberRot;
 
 	void Awake()
 	{
@@ -35,38 +35,35 @@ public class UI_Shake : MonoBehaviour
 		{
 			myRect = myText.rectTransform;
 		}
-
-		//Remember Rotation
-		RememberRot();
 	}
 
-	void RememberRot()
+	void Start()
 	{
-		rememberRot = myRect.localEulerAngles;
+		if (activate)
+		{
+			myRect.localPosition = shownPosition;
+		}
+		else
+		if (!activate)
+		{
+			myRect.localPosition = hiddenPosition;	
+		}
 	}
 
-	float PingPong (float a_Min, float a_Max)
-	{
-		float bounce = 0;
-
-		bounce = Mathf.PingPong( Time.time * shakeSpeed, a_Max - a_Min) + a_Min;
-
-		return bounce;
-	}
 
 	void Update()
 	{
 		if (activate)
 		{
-			myRect.localEulerAngles = new Vector3(myRect.localEulerAngles.x, myRect.localEulerAngles.y, myRect.localEulerAngles.z + PingPong(-shakeStrength, shakeStrength));
+			myRect.localPosition = Vector3.MoveTowards(myRect.localPosition, shownPosition, Time.deltaTime * moveSpeed);
 		}
 		else
+		if (!activate)
 		{
-			myRect.localEulerAngles = rememberRot;
+			myRect.localPosition = Vector3.MoveTowards(myRect.localPosition, hiddenPosition, Time.deltaTime * moveSpeed);
 		}
 	}
 
-	//Public Functions
 	public void EffectOn()
 	{
 		activate = true;
@@ -80,7 +77,7 @@ public class UI_Shake : MonoBehaviour
 	public void EffectTime(float time)
 	{
 		EffectOn();
-
+		CancelInvoke();
 		Invoke("EffectOff", time);
 	}
 }
