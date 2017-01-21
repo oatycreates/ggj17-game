@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sand
+  - Water
   layers:
   - Default
   - TransparentFX

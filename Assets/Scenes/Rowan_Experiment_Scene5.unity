@@ -281,6 +281,27 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1054768202a72eb4bbc732cb68c13b12, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &237138225 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1984157792994370, guid: f5e461a01023a264dbc9a927ec1a0f33,
+    type: 2}
+  m_PrefabInternal: {fileID: 1764323574}
+--- !u!114 &237138231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 237138225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c563ec28cdcb8994cba87a378d9d8297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToLookFor: Water
+  prefabToPool: {fileID: 1209845350408486, guid: 02deb4d66d7ec1f4bb963a04296b7a7b,
+    type: 2}
+  numberToPool: 5
+  pooledObjects: []
 --- !u!1 &238119081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1114,7 @@ GameObject:
   - component: {fileID: 935887901}
   m_Layer: 0
   m_Name: TempWater
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2396,6 +2417,14 @@ Prefab:
         type: 2}
       propertyPath: m_Limits.max
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915786882549626, guid: f5e461a01023a264dbc9a927ec1a0f33, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915786882549626, guid: f5e461a01023a264dbc9a927ec1a0f33, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5e461a01023a264dbc9a927ec1a0f33, type: 2}
