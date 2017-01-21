@@ -1,0 +1,46 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody2D))]
+public class SwipeObject : MonoBehaviour {
+#region Variables
+	private TouchDrag m_touchDrag = null;
+	private Rigidbody2D m_rigidbody2D = null;
+#endregion
+
+	/// <summary>
+    /// Use this for initialization.
+    /// </summary>
+	void Start () {
+		// Register touch event handler
+		m_touchDrag = FindObjectOfType<TouchDrag>();
+		if (!m_touchDrag) {
+			Debug.LogError("Can't find TouchDrag object in the scene!");
+		}
+		m_touchDrag.OnSwipe += OnSwipe;
+
+		m_rigidbody2D = GetComponent<Rigidbody2D>();
+	}
+	
+	/// <summary>
+    /// Update is called once per frame
+    /// </summary>
+	void Update () {
+		
+	}
+
+
+	/// <summary>
+    /// Called when a swipe action has been detected.
+    /// </summary>
+    /// <param name="a_swipeStartPos">Where the swipe started.</param>
+    /// <param name="a_swipeEndPos">Where the swipe has ended.</param>
+    /// <param name="a_swipeDist">How far the swipe travelled.</param>
+    /// <param name="a_swipeDuration">How long the swipe took to complete.</param>
+	public void OnSwipe(Vector3 a_swipeStartPos, Vector3 a_swipeEndPos, float a_swipeDist, float a_swipeDuration)
+	{
+		float swipeSpeed = a_swipeDist / a_swipeDuration;
+		m_rigidbody2D.AddForceAtPosition((a_swipeEndPos - a_swipeStartPos).normalized * swipeSpeed, a_swipeStartPos, ForceMode2D.Force);
+	}
+}
