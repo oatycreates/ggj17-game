@@ -35,7 +35,7 @@ public class Game_ScoreSand : MonoBehaviour
 
 	void OnGUI()
 	{
-		GUI.TextField (new Rect( 20, 10, 100, 20), percentage);
+		GUI.TextField (new Rect( 35, 30, 50, 20), percentage);
 	}
 
 	/*
