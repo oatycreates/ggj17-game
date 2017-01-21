@@ -1,10 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class SwipeObject : MonoBehaviour {
 #region Variables
+	public float waterLevelY = -5.0f;
+	public float airSwipeMult = 0.75f;
+	public float waterSwipeMult = 1.5f;
+
 	private TouchDrag m_touchDrag = null;
 	private Rigidbody m_rigidbody = null;
 #endregion
@@ -33,6 +38,15 @@ public class SwipeObject : MonoBehaviour {
 		
 	}
 
+    /// <summary>
+    /// Draws gizmos.
+    /// </summary>
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+    	Gizmos.DrawLine(new Vector3(-100, waterLevelY, 0), new Vector3(100, waterLevelY, 0));
+    }
+
 
 	/// <summary>
     /// Called when a swipe action has been detected.
@@ -43,10 +57,25 @@ public class SwipeObject : MonoBehaviour {
     /// <param name="a_swipeDuration">How long the swipe took to complete.</param>
 	public void OnSwipe(Vector3 a_swipeStartPos, Vector3 a_swipeEndPos, float a_swipeDist, float a_swipeDuration)
 	{
+		float swipeForceMult = CalculateSwipeForceMult(a_swipeStartPos, a_swipeEndPos, a_swipeDist, a_swipeDuration);
+
 		// Add swipe force to RigidBody
 		float swipeSpeed = a_swipeDist / a_swipeDuration;
 		Vector3 swipeDirection = (a_swipeEndPos - a_swipeStartPos).normalized;
-		m_rigidbody.AddForceAtPosition(swipeDirection * swipeSpeed, a_swipeStartPos, ForceMode.Force);
+		m_rigidbody.AddForceAtPosition(swipeDirection * swipeSpeed * swipeForceMult, a_swipeStartPos, ForceMode.Force);
 
 	}
+
+    private float CalculateSwipeForceMult(Vector3 a_swipeStartPos, Vector3 a_swipeEndPos, float a_swipeDist, float a_swipeDuration)
+    {
+		// If below water, increase force
+		if (m_rigidbody.position.y <= waterLevelY)
+		{
+			return waterSwipeMult;
+		}
+		else
+		{
+			return airSwipeMult;
+		}
+    }
 }

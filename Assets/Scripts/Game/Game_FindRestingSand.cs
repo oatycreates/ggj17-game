@@ -31,7 +31,7 @@ public class Game_FindRestingSand : MonoBehaviour
 		m_menuShowPanels = FindObjectOfType<ShowPanels>();
 		if (m_menuShowPanels == null)
 		{
-			Debug.LogError("Could not find ShowPanels instance in the scene!");
+			Debug.LogWarning("Could not find ShowPanels instance in the scene! This may be because you directly started the scene instead of using the MainMenu.");
 		}
 
 		sand = GameObject.FindObjectsOfType<SandPhysicsResting>();
@@ -77,10 +77,16 @@ public class Game_FindRestingSand : MonoBehaviour
 		// Wait for some time to confirm that the castle is destroyed and stable.
 		yield return new WaitForSeconds(gameEndWaitTime);
 
-		Debug.Log("Game Over!");
+		if (!m_isGameOver)
+		{
+			Debug.Log("Game Over!");
 
-		m_isGameOver = true;
-		m_menuShowPanels.ShowGameEndPanel();
+			m_isGameOver = true;
+			if (m_menuShowPanels)
+			{
+				m_menuShowPanels.ShowGameEndPanel();
+			}
+		}
 	}
 
 	private int GetrestingSandCount()

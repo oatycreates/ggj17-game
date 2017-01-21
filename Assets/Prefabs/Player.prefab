@@ -84,9 +84,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4915786882549626}
-  - component: {fileID: 114250653100856506}
   - component: {fileID: 54421556871735242}
   - component: {fileID: 65456957995654300}
+  - component: {fileID: 114250653100856506}
   - component: {fileID: 114245196899558512}
   m_Layer: 0
   m_Name: MarlinFlip
@@ -276,6 +276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefee3d8335bb49c7a2ad15c76998c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterLevelY: -5
+  airSwipeMult: 0.75
+  waterSwipeMult: 1.25
 --- !u!212 &212462918673872106
 SpriteRenderer:
   m_ObjectHideFlags: 1
