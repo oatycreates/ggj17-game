@@ -1,4 +1,4 @@
-# Mar-leen Flip
+# Marleen Flip
 
 Fish-tacular Unity game project created during the 2017 Global Game Jam at the Melbourne, Australia site for the 'Waves' theme. 🐬
 
