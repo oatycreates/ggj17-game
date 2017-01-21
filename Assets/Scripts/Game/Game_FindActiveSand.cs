@@ -7,16 +7,21 @@ using UnityEngine;
 /// </summary>
 public class Game_FindActiveSand : MonoBehaviour 
 {
-	private GameObject[] sand;
-	public List<GameObject> activeSand = new List<GameObject>();
+	public GameObject[] sand;
+	//public List<GameObject> activeSand = new List<GameObject>();
+
+	public static int totalSandBlocks;
 
 	void Awake()
 	{
 		sand = GameObject.FindGameObjectsWithTag("Sand");
 
-		print ("There are " + sand.Length + " block of sand in the scene.");
+		//print ("There are " + sand.Length + " block of sand in the scene.");
+
+		totalSandBlocks = sand.Length;
 	}
 
+	/*
 	void Start()
 	{
 		//Add sand to the list ONLY if it's active in heirarchy.
@@ -33,6 +38,8 @@ public class Game_FindActiveSand : MonoBehaviour
 		}
 
 		print ("However, only " + activeSand.Count + " are Active In Heirarchy.");
-	}
+
+		totalSandBlocks = activeSand.Count;
+	}*/
 
 }
