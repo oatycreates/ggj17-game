@@ -24,7 +24,7 @@ public class MoveWaveWithForce : MonoBehaviour
 		}
 		else
 		{
-			myRigid.AddForce( Vector3.right * -(moveForce/10), ForceMode.Force);
+			myRigid.AddForce( Vector3.right * -(moveForce/10), ForceMode.Acceleration);
 		}
 	}
 }
