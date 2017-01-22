@@ -203,12 +203,19 @@ public class Buoyancy : MonoBehaviour {
         boundsCentre = collider.bounds.center;
 
         // Cast a ray from the input point to the center
-        rayDir = boundsCentre - point;
-        collisionTestRay = new Ray(point, rayDir);
-        didRayHit = collider.Raycast(collisionTestRay, out hitInfo, rayDir.magnitude);
+        if (Vector3.Distance(boundsCentre, point) > 0.001f)
+		{
+	        rayDir = boundsCentre - point;
+	        collisionTestRay = new Ray(point, rayDir);
+	        didRayHit = collider.Raycast(collisionTestRay, out hitInfo, rayDir.magnitude);
 
-        // If the ray hit the collider, the point is outside. So return the inverse of the collision status
-        return !didRayHit && collider.bounds.Contains(point);
+	        // If the ray hit the collider, the point is outside. So return the inverse of the collision status
+	        return !didRayHit && collider.bounds.Contains(point);
+        }
+        else
+        {
+        	return true;
+        }
     }
 
     /// <summary>
