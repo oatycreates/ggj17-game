@@ -13,7 +13,7 @@ public class Game_Shortcuts : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Delete))
 		{
 			Debug.Log( "Quit Game");
 			Application.Quit();
