@@ -2,6 +2,10 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Marlin Flip game- modifications made by Rowan Donaldson, 22/01/2017
+/// </summary>
+
 public class ShowPanels : MonoBehaviour {
 
 	public GameObject optionsPanel;							//Store a reference to the Game Object OptionsPanel 
@@ -10,6 +14,8 @@ public class ShowPanels : MonoBehaviour {
 	public GameObject menuPanel;							//Store a reference to the Game Object MenuPanel 
 	public GameObject pausePanel;							//Store a reference to the Game Object PausePanel 
 	public GameObject gameEndPanel;							//Store a reference to the Game Object GameEndPanel 
+
+	public GameObject infoPanel;
 
 
 	//Call this function to activate and display the Options panel during the main menu
@@ -77,6 +83,20 @@ public class ShowPanels : MonoBehaviour {
 	public void HideGameEndPanel()
 	{
 		gameEndPanel.SetActive (false);
+		darkTint.SetActive(false);
+	}
+
+
+	//Rowan Custom Panel
+	public void ShowInfoPanel()
+	{
+		infoPanel.SetActive(true);
+		darkTint.SetActive(true);
+	}
+
+	public void HideInfoPanel()
+	{
+		infoPanel.SetActive(false);
 		darkTint.SetActive(false);
 	}
 
