@@ -290,15 +290,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4097169250905350, guid: 21d48069ab11746b795e7748c7e8a77a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 4097169250905350, guid: 21d48069ab11746b795e7748c7e8a77a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -15
+      value: -12.7
       objectReference: {fileID: 0}
     - target: {fileID: 4097169250905350, guid: 21d48069ab11746b795e7748c7e8a77a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4097169250905350, guid: 21d48069ab11746b795e7748c7e8a77a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -442,7 +442,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4726584602818602, guid: 449fa28e1013c4bd8b0efdf510e6c075, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 4726584602818602, guid: 449fa28e1013c4bd8b0efdf510e6c075, type: 2}
       propertyPath: m_LocalRotation.x
@@ -891,24 +891,6 @@ Prefab:
     - target: {fileID: 4652239181529850, guid: f5e461a01023a264dbc9a927ec1a0f33, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 59769860687983686, guid: f5e461a01023a264dbc9a927ec1a0f33,
-        type: 2}
-      propertyPath: m_Limits.min
-      value: -45
-      objectReference: {fileID: 0}
-    - target: {fileID: 59769860687983686, guid: f5e461a01023a264dbc9a927ec1a0f33,
-        type: 2}
-      propertyPath: m_Limits.max
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915786882549626, guid: f5e461a01023a264dbc9a927ec1a0f33, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915786882549626, guid: f5e461a01023a264dbc9a927ec1a0f33, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5e461a01023a264dbc9a927ec1a0f33, type: 2}
