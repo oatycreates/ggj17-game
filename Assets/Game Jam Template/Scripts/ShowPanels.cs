@@ -9,6 +9,7 @@ public class ShowPanels : MonoBehaviour {
 	public GameObject creditsPanel;							//Store a reference to the Game Object CreditsPanel 
 	public GameObject menuPanel;							//Store a reference to the Game Object MenuPanel 
 	public GameObject gameMenuPanel;						//Store a reference to the Game Object GameMenuPanel 
+	public GameObject splashPanel;							//Store a reference to the Game Object SplashPanel 
 	public GameObject pausePanel;							//Store a reference to the Game Object PausePanel 
 	public GameObject gameEndPanel;							//Store a reference to the Game Object GameEndPanel 
 
@@ -39,6 +40,18 @@ public class ShowPanels : MonoBehaviour {
 	{
 		creditsPanel.SetActive(false);
 		darkTint.SetActive(false);
+	}
+
+	//Call this function to activate and display the splash panel during the splash screen
+	public void ShowSplash()
+	{
+		splashPanel.SetActive (true);
+	}
+
+	//Call this function to deactivate and hide the splash panel during the splash screen
+	public void HideSplash()
+	{
+		splashPanel.SetActive (false);
 	}
 
 	//Call this function to activate and display the main menu panel during the main menu

@@ -11,7 +11,7 @@ public class StartOptions : MonoBehaviour {
 	public int sceneToStart = 1;										//Index number in build settings of scene to load if changeScenes is true
 	public bool changeScenes;											//If true, load a new scene when Start is pressed, if false, fade out UI and continue in single scene
 	public bool changeMusicOnStart;										//Choose whether to continue playing menu music or start a new music clip
-
+	public float splashDisplayTime = 3.5f;								// Time to show the splash screen for
 
 	[HideInInspector] public bool inMainMenu = true;					//If true, pause button disabled in main menu (Cancel in input manager, default escape key)
 	[HideInInspector] public Animator animColorFade; 					//Reference to animator which will fade to and from black when starting game.
@@ -32,6 +32,22 @@ public class StartOptions : MonoBehaviour {
 
 		//Get a reference to PlayMusic attached to UI object
 		playMusic = GetComponent<PlayMusic> ();
+	}
+
+	void Start()
+	{
+		ShowSplashScreen();
+	}
+
+	private void ShowSplashScreen()
+	{
+		showPanels.HideMenu();
+		showPanels.ShowSplash();
+		inMainMenu = true;
+
+		// Set trigger for hiding splash screen after a delay
+		Invoke("HideSplashDelayed", splashDisplayTime);
+		Debug.Log ("Showing splash.");
 	}
 
 
@@ -97,6 +113,22 @@ public class StartOptions : MonoBehaviour {
 
 		// Show the game menu UI elements
 		showPanels.ShowGameMenu();
+	}
+
+	public void HideSplashDelayed()
+	{
+		//Hide the splash UI element after a wait for start game in scene
+		showPanels.HideSplash();
+
+		//Set trigger for animator to start animation fading in Menu UI
+		ShowMenuDelayed();
+		//animMenuAlpha.SetTrigger ("fade");
+		//Invoke("ShowMenuDelayed", fadeAlphaAnimationClip.length);
+	}
+	public void ShowMenuDelayed()
+	{
+		//Show the main menu UI element after fading out menu for start game in scene
+		showPanels.ShowMenu();
 	}
 
 	public void HideMenuDelayed()

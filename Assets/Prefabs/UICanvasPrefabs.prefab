@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55d3d585907ae24bb98a082083f4fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayTime: 1
+  delayTime: 4.5
 --- !u!222 &222395871292892802
 CanvasRenderer:
   m_ObjectHideFlags: 1
