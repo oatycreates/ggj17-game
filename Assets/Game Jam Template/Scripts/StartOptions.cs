@@ -94,12 +94,21 @@ public class StartOptions : MonoBehaviour {
 
 		//Load the selected scene, by scene index number in build settings
 		SceneManager.LoadScene (sceneToStart);
+
+		// Show the game menu UI elements
+		showPanels.ShowGameMenu();
 	}
 
-	public void HideDelayed()
+	public void HideMenuDelayed()
 	{
 		//Hide the main menu UI element after fading out menu for start game in scene
 		showPanels.HideMenu();
+	}
+
+	public void ShowGameMenuDelayed()
+	{
+		// Show the game menu UI elements
+		showPanels.ShowGameMenu();
 	}
 
 	public void StartGameInScene()
@@ -116,7 +125,8 @@ public class StartOptions : MonoBehaviour {
 		}
 		//Set trigger for animator to start animation fading out Menu UI
 		animMenuAlpha.SetTrigger ("fade");
-		Invoke("HideDelayed", fadeAlphaAnimationClip.length);
+		Invoke("HideMenuDelayed", fadeAlphaAnimationClip.length);
+		Invoke("ShowGameMenuDelayed", fadeAlphaAnimationClip.length);
 		Debug.Log ("Game started in same scene! Put your game starting stuff here.");
 	}
 

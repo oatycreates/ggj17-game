@@ -8,6 +8,7 @@ public class ShowPanels : MonoBehaviour {
 	public GameObject darkTint;								//Store a reference to the Game Object DarkTint 
 	public GameObject creditsPanel;							//Store a reference to the Game Object CreditsPanel 
 	public GameObject menuPanel;							//Store a reference to the Game Object MenuPanel 
+	public GameObject gameMenuPanel;						//Store a reference to the Game Object GameMenuPanel 
 	public GameObject pausePanel;							//Store a reference to the Game Object PausePanel 
 	public GameObject gameEndPanel;							//Store a reference to the Game Object GameEndPanel 
 
@@ -51,6 +52,18 @@ public class ShowPanels : MonoBehaviour {
 	{
 		menuPanel.SetActive (false);
 	}
+
+	//Call this function to activate and display the game menu panel during the game
+	public void ShowGameMenu()
+	{
+		gameMenuPanel.SetActive (true);
+	}
+
+	//Call this function to deactivate and hide the game menu panel during the game
+	public void HideGameMenu()
+	{
+		gameMenuPanel.SetActive (false);
+	}
 	
 	//Call this function to activate and display the Pause panel during game play
 	public void ShowPausePanel()
@@ -84,6 +97,7 @@ public class ShowPanels : MonoBehaviour {
 	{
 		Debug.Log ("Restart Game");
 		HideGameEndPanel();
+		gameMenuPanel.SetActive (false);
 		SceneManager.LoadScene ( "MainMenu" );
 	}
 }
