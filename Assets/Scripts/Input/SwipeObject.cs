@@ -62,7 +62,16 @@ public class SwipeObject : MonoBehaviour {
 		// Add swipe force to RigidBody
 		float swipeSpeed = a_swipeDist / a_swipeDuration;
 		Vector3 swipeDirection = (a_swipeEndPos - a_swipeStartPos).normalized;
-		m_rigidbody.AddForceAtPosition(swipeDirection * swipeSpeed * swipeForceMult, a_swipeStartPos, ForceMode.Force);
+
+		//Sorry Patrick- this is a quick fix
+		if (Time.timeScale > 0)
+		{
+			m_rigidbody.AddForceAtPosition(swipeDirection * swipeSpeed * swipeForceMult, a_swipeStartPos, ForceMode.Force);
+		}
+		else
+		{
+			Debug.LogWarning("Trying to Move Marleen while game is paused"); 
+		}
 
 	}
 
