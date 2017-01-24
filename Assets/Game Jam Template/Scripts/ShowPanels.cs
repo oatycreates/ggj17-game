@@ -128,9 +128,30 @@ public class ShowPanels : MonoBehaviour {
 
 	public void RestartGame()
 	{
+		//Was having a lot of trouble here - couldn't figure out why game wouldn't reset properly
+		//Turns Out, I forgot to resume game time with Time.timeScale
+		//Do this in the Inspector, with the Pause Script and this button
+
 		Debug.Log ("Restart Game");
 		HideGameEndPanel();
-		gameMenuPanel.SetActive (false);
+		HideGameMenu();
+		HidePausePanel();
+		//gameMenuPanel.SetActive (false);
+
+
+		// If we just restart the game, then this gameObject ("UI") will be loaded again, 
+		//making duplicates of a 'Don't Destroy On Load' object
+
+		//To avoid this, we'll destroy THIS instance of the "UI" gameObject
+		DestroyMyself();
+
 		SceneManager.LoadScene ( "MainMenu" );
+	}
+
+	void DestroyMyself()
+	{
+		//Debug.LogWarning("Destroyed One Instance of Me");
+		GameObject.Destroy( gameObject );
+		Debug.Log("Destroyed old instance of UI. Allow for a new one to be created in 'Main Menu' scene.");
 	}
 }

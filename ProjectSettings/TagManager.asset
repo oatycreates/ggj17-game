@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Sand
   - Water
+  - UI
   layers:
   - Default
   - TransparentFX

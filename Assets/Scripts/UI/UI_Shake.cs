@@ -83,4 +83,9 @@ public class UI_Shake : MonoBehaviour
 
 		Invoke("EffectOff", time);
 	}
+
+	void OnDisable()
+	{
+		myRect.localEulerAngles = rememberRot;
+	}
 }
