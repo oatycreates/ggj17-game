@@ -2,6 +2,8 @@
 
 Fish-tacular Unity game project created during the 2017 Global Game Jam at the Melbourne, Australia site for the 'Waves' theme. 🐬
 
+# Media
+
 [Gameplay Video](https://youtu.be/vRE310-bxSQ)
 
 # Credits
