@@ -41,7 +41,8 @@ public class Game_FindRestingSand : MonoBehaviour
 			Debug.LogError("Couldn't find any Sand objects in the scene!");
 		}
 
-		StartCoroutine(CheckSandStatus());
+			StartCoroutine(CheckSandStatus());
+
 	}
 
 	void Update()
