@@ -278,10 +278,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 1380416057538934, guid: 21d48069ab11746b795e7748c7e8a77a, type: 2}
-      propertyPath: m_Name
-      value: Water
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21d48069ab11746b795e7748c7e8a77a, type: 2}
   m_IsPrefabParent: 0
