@@ -5228,7 +5228,8 @@ MonoBehaviour:
     She''s can''t stand seeing Sandcastles!
 
 
-    <b>Swipe the Screen</b> to fling Marlene and <b>knock over 100%</b> of the Sandcastle.'
+    <b>Swipe the Screen</b> to fling Marlene and push <b>All the Sand</b> into the
+    <b>Water</b>.'
 --- !u!114 &114641937975393524
 MonoBehaviour:
   m_ObjectHideFlags: 1

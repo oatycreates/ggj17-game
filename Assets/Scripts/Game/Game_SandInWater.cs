@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Find all the disturbed and resting sand blocks in the scene.
+/// Find all the sand blocks and compare against sand blocks in water.
+/// This script goes on the Water Trigger Zone
+/// Most of this is modified from Patrick's Game_FindRestingSand script.
 /// </summary>
-public class Game_FindRestingSand : MonoBehaviour 
+public class Game_SandInWater : MonoBehaviour 
 {
 	/// <summary>
     /// Minimum castle destruction percentage before the game will start ending.
@@ -17,25 +19,29 @@ public class Game_FindRestingSand : MonoBehaviour
     /// </summary>
 	public float gameEndWaitTime = 3.0f;
 
-	private SandPhysicsResting[] sand;
-	public List<SandPhysicsResting> restingSand = new List<SandPhysicsResting>();
+	private GameObject[] sand;
+	public List<GameObject> submergedSand = new List<GameObject>();
 
 	private ShowPanels m_menuShowPanels = null;
 	private Coroutine m_gameEndTimer = null;
 
 	private bool m_isGameOver = false;
+	private GameObject waterObject;
 
 	void Start()
 	{
+		waterObject = GameObject.FindGameObjectWithTag("Water");
+
 		m_isGameOver = false;
 		m_menuShowPanels = FindObjectOfType<ShowPanels>();
+
 		if (m_menuShowPanels == null)
 		{
 			Debug.LogWarning("Could not find ShowPanels instance in the scene! This may be because you directly started the scene instead of using the MainMenu.");
 		}
 
-		sand = GameObject.FindObjectsOfType<SandPhysicsResting>();
-		//Debug.Log("There are " + sand.Length + " block of sand in the scene.");
+		//sand = GameObject.FindObjectsOfType<SandPhysicsResting>();
+		sand = GameObject.FindGameObjectsWithTag("Sand") as GameObject[];
 
 		if (sand.Length == 0) {
 			Debug.LogError("Couldn't find any Sand objects in the scene!");
@@ -54,7 +60,7 @@ public class Game_FindRestingSand : MonoBehaviour
 		{
 			if (!m_isGameOver)
 			{
-				if (GetCastleDestroyPercent() >= gameEndMinDestroyPercent)
+				if (GetCastleSubmergedPercent() >= gameEndMinDestroyPercent)
 				{
 					// Castle has been destroyed, start the timer to end the game
 					m_gameEndTimer = StartCoroutine(StartGameEnd());
@@ -80,7 +86,7 @@ public class Game_FindRestingSand : MonoBehaviour
 			// Check with an interval to reduce the impact of lag.
 			yield return new WaitForSeconds(1.5f);
 
-			GetrestingSandCount();
+			GetSubmergedSandCount();
 		
 			// Schedule the next sand check
 
@@ -105,25 +111,34 @@ public class Game_FindRestingSand : MonoBehaviour
 		}
 	}
 
-	private int GetrestingSandCount()
+	private int GetSubmergedSandCount()
 	{
-		restingSand.Clear();
+		submergedSand.Clear();
+
+		//Get the water object's highest point
+		float waterLevel = GetWaterLevel(waterObject);
 
 		//Add sand to the list ONLY if it's active in hierarchy.
 		for (int i = 0; i < sand.Length; i++)
 		{
-			if (sand[i].HasSandBeenTriggered() && sand[i].IsSandResting())
+			//If the instance is below the Water Object's Highest Point, then add to list
+			if (sand[i].gameObject.transform.position.y <= waterLevel)
 			{
-				restingSand.Add( sand[i] );
+				submergedSand.Add( sand[i] );
 			}
 		}
 
-		print ("There are now " + restingSand.Count + " resting disturbed sand pieces. The castle destroy percent is: " + (GetCastleDestroyPercent() * 100.0f));
-		return restingSand.Count;
+		print ("There are now " + submergedSand.Count + " submerged sand pieces. The castle submerged percent is: " + (GetCastleSubmergedPercent() * 100.0f));
+		return submergedSand.Count;
 	}
 
-	public float GetCastleDestroyPercent()
+	public float GetCastleSubmergedPercent()
 	{
-		return (float)restingSand.Count / sand.Length;
+		return (float)submergedSand.Count / sand.Length;
+	}
+
+	private float GetWaterLevel( GameObject water )
+	{
+		return (float) water.transform.position.y + ((water.GetComponent<Collider>().bounds.size.y)/2);
 	}
 }
