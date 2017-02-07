@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: c8632e1c281ab9a479f1c5fcc53a6115
+timeCreated: 1486202061
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: crabby_0
+    21300002: crabby_1
+    21300004: crabby_2
+    21300006: crabby_3
+    21300008: crabby_4
+    21300010: crabby_5
+    21300012: crabby_6
+    21300014: crabby_7
+    21300016: crabby_8
+    21300018: crabby_9
+    21300020: crabby_10
+    21300022: crabby_11
+    21300024: crabby_12
+    21300026: crabby_13
+    21300028: crabby_14
+    21300030: crabby_15
+    21300032: crabby_16
+    21300034: crabby_17
+    21300036: crabby_18
+    21300038: crabby_19
+    21300040: crabby_20
+    21300042: crabby_21
+    21300044: crabby_22
+    21300046: crabby_23
+    21300048: crabby_24
+    21300050: crabby_25
+    21300052: crabby_26
+    21300054: crabby_27
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crabby_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 113
+        width: 4
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8733199}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 106
+        width: 19
+        height: 32
+      alignment: 9
+      pivot: {x: 0.8377655, y: 0.90109634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 113
+        width: 32
+        height: 15
+      alignment: 9
+      pivot: {x: 0.8166549, y: 0.2523051}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 117
+        width: 6
+        height: 10
+      alignment: 9
+      pivot: {x: 0.6125882, y: 0.1622345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_4
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 118
+        width: 6
+        height: 10
+      alignment: 9
+      pivot: {x: 0.33111826, y: 0.1622345}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_5
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 108
+        width: 28
+        height: 22
+      alignment: 9
+      pivot: {x: 0.08985628, y: 0.10082245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_6
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 105
+        width: 26
+        height: 27
+      alignment: 9
+      pivot: {x: 0.110270575, y: 0.875295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_7
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 110
+        width: 7
+        height: 18
+      alignment: 9
+      pivot: {x: 0.30699158, y: 0.8377656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 73
+        width: 8
+        height: 17
+      alignment: 9
+      pivot: {x: 0.24667585, y: 0.8377654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 64
+        width: 12
+        height: 35
+      alignment: 9
+      pivot: {x: 0.8096183, y: 0.89566827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 76
+        width: 33
+        height: 13
+      alignment: 9
+      pivot: {x: 0.8070595, y: 0.4740178}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 81
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_12
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 81
+        width: 32
+        height: 16
+      alignment: 9
+      pivot: {x: 0.14112377, y: 0.20445538}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_13
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 73
+        width: 20
+        height: 32
+      alignment: 9
+      pivot: {x: 0.14534608, y: 0.8483207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_14
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 82
+        width: 5
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8565305}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_15
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 64
+        width: 25
+        height: 13
+      alignment: 9
+      pivot: {x: 0.25680846, y: 0.7338374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_16
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 33
+        width: 12
+        height: 35
+      alignment: 9
+      pivot: {x: 0.24667613, y: 0.9053188}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_17
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 19
+        width: 10
+        height: 36
+      alignment: 9
+      pivot: {x: 0.39867038, y: 0.875295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_18
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 33
+        width: 32
+        height: 15
+      alignment: 9
+      pivot: {x: 0.81665516, y: 0.79273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_19
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 25
+        width: 28
+        height: 36
+      alignment: 9
+      pivot: {x: 0.753324, y: 0.8565302}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_20
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 41
+        width: 17
+        height: 17
+      alignment: 9
+      pivot: {x: 0.3211827, y: 0.81789714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_21
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 45
+        width: 32
+        height: 13
+      alignment: 9
+      pivot: {x: 0.14112425, y: 0.4220543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_22
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 42
+        width: 9
+        height: 17
+      alignment: 9
+      pivot: {x: 0.72517735, y: 0.83776563}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 13
+        height: 15
+      alignment: 9
+      pivot: {x: 0.16223444, y: 0.86028314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_24
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 10
+        width: 18
+        height: 9
+      alignment: 9
+      pivot: {x: 0.6876475, y: 0.68764687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_25
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 9
+        width: 12
+        height: 11
+      alignment: 9
+      pivot: {x: 0.6970291, y: 0.86847097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: crabby_26
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 18
+        height: 29
+      alignment: 9
+      pivot: {x: 0.33111656, y: 0.83776534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
